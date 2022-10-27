@@ -1,8 +1,11 @@
 package leetcode;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class MaxProdSubArray {
 
-	public static void main(String[] args) {
+
 		// TODO Auto-generated method stub
 		
 		/*
@@ -44,7 +47,36 @@ public class MaxProdSubArray {
 		
 		//int nums[] = {2,3,-2,4};
 		//int nums[] = {-2,0,-1};
-		int nums[] = {0,2};
+		
+		
+		
+		@Test
+		public void maxProdSubArray1() {
+			int nums[] = {2, 3, -2, 4};
+			Assert.assertEquals(6, maxProdSubArray(nums));
+		}
+
+		@Test
+		public void maxProdSubArray2() {
+			int nums[] = {-2,0,1};
+			Assert.assertEquals(0, maxProdSubArray(nums));
+		}
+
+		@Test
+		public void maxProdSubArray3() {
+			int nums[] = {0, 2};
+			Assert.assertEquals(2, maxProdSubArray(nums));
+		}
+
+		@Test
+		public void maxProdSubArray4() {
+			int nums[] = {1};
+			Assert.assertEquals(1, maxProdSubArray(nums));
+		}
+
+		
+		public int maxProdSubArray(int[] nums) {
+		
 		int temp=nums[0],var=1;
 		
 		System.out.println(temp);
@@ -59,9 +91,9 @@ public class MaxProdSubArray {
 				}
 			}
 		}
-		System.out.println(temp);
+		return temp;
 		
-		
-	}
+		}
+	
 
 }
