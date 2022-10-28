@@ -33,7 +33,7 @@ public class MaxProdSubArray {
 		 * [3],[3,-2],[3,-2,4]
 		 * [-2],[-2,4]
 		 * [4]
-		 * Assign temp variable with nums[0]
+		 * Assign temp variable with nums[0], var as 1
 		 * Outer for loop to iterate from i=0 to length of array-1
 		 * var=a[i]
 		 * inner for loop to iterate from j =i+1 to length of array
@@ -59,7 +59,7 @@ public class MaxProdSubArray {
 		@Test
 		public void maxProdSubArray2() {
 			int nums[] = {-2,0,1};
-			Assert.assertEquals(0, maxProdSubArray(nums));
+			Assert.assertEquals(1, maxProdSubArray(nums));
 		}
 
 		@Test
@@ -77,23 +77,21 @@ public class MaxProdSubArray {
 		
 		public int maxProdSubArray(int[] nums) {
 		
-		int temp=nums[0],var=1;
+		int var=1, max =Integer.MIN_VALUE;
 		
-		System.out.println(temp);
-		
-		for(int i=0; i<nums.length-1;i++)
+		for(int i=0; i<nums.length;i++)
 		{
-			var = nums[i];
-			for(int j=i+1; j<nums.length;j++) {
+			var = 1;
+			for(int j=i; j<nums.length;j++) {
 				var = var*nums[j];
-				if(temp<var) {
-					temp=var;
-				}
+				max = Math.max(max, var);
+				
 			}
 		}
-		return temp;
+		return max;
 		
 		}
-	
-
+		
+		
+		
 }
