@@ -30,6 +30,7 @@ public class MoveZeroes {
 		 */
 		
 		
+		
 		int[] nums = {0,1,0,3,12};
 		
 		for(int i=0; i<nums.length-1;i++) {
