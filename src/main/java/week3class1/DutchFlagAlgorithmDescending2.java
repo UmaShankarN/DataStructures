@@ -1,5 +1,8 @@
 package week3class1;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +19,6 @@ public class DutchFlagAlgorithmDescending2 {
 
 	public int[] threePointer(int[] input) {
 		// TODO Auto-generated method stub
-		
 		
 		int low=0, middle=0, high=input.length-1;
 		int temp = 0;
