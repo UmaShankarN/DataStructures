@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.HashMap;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,7 +40,7 @@ public class GoodPairs {
 		int[] nums = {1,2,3,4};
 		Assert.assertEquals(0, numIdenticalPairs(nums));
 	}
-	
+	//BruteForce
     public int numIdenticalPairs(int[] nums) {
     	
     	int counter =0;
@@ -48,6 +50,24 @@ public class GoodPairs {
     				counter+=1;
     		}
 		}
+        return counter;
+    }
+
+    // Optimised
+public int numIdenticalPairs2(int[] nums) {
+    	
+    	int counter =0;
+        HashMap<Integer, Integer> ncount = new HashMap<Integer, Integer>();
+        for(int n:nums){
+            ncount.put(n,ncount.getOrDefault(n,0)+1);
+        }
+        // 1=3, 2=1,3=2
+        for(int n:ncount.values()){
+           if(n!=1){
+               for(int i=1;i<n;i++)
+                counter=counter+i;
+           }
+        }
         return counter;
     }
 

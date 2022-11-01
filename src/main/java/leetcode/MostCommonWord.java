@@ -12,6 +12,8 @@ public class MostCommonWord {
 	/*
 	 * 819. Most Common Word
 	 * https://leetcode.com/problems/most-common-word/description/
+	 * https://gist.github.com/psayre23/c30a821239f4818b0709
+	 * Feedback on Training, mentoring, challenges and hurdles
 	 */
 	
 	/*
@@ -60,26 +62,35 @@ public class MostCommonWord {
 		Assert.assertArrayEquals(new String[] {null}, mostCommonWord(paragraph, banned));
 	}
 	
+	@Test
+	public void mostCommonWord6() {
+		String paragraph = ".";
+		String[] banned = {""};
+		Assert.assertArrayEquals(new String[] {null}, mostCommonWord(paragraph, banned));
+	}
+	
+	
 	 public String[] mostCommonWord(String paragraph, String[] banned) {
-		 String[] words = paragraph.toLowerCase().replaceAll("[^a-zA-Z0-9\\s+]", "").split("\\ |\\s+|\\!|\\?|\\'|,|\\;|\\.");
-		
+		 String[] words = paragraph.toLowerCase().replaceAll("[!?',;.]"," ").split("\\s+");
+		System.out.println(Arrays.toString(words));
 		 Map<String, Integer> countMap = new HashMap<String,Integer>();
 		 
 		 for(String string:words)
 			 countMap.put(string,countMap.getOrDefault(string, 0)+1);
 		 
+		 System.out.println(countMap);
 		 for (String string : banned) 
 			 	countMap.remove(string);
 		 
-		 String currentword = null;
+		 String[] currentword = new String[1];
 		 int temp =0;
 		 for (String string : countMap.keySet()) {
 			if(temp<countMap.get(string)) {
 				temp = countMap.get(string);
-				currentword = string;
+				currentword[0] = string;
 			}
 		}
-		 return new String[] {currentword};   
+		 return currentword;   
 	    }
 
 }
