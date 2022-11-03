@@ -74,4 +74,28 @@ public class SubstringsThreeDistinctCharacters {
 	    
 }
 	   
+//	   
+//	   int count = 0;
+//       int start=0;
+//       if(s.length()<3) return 0;
+//      HashMap<Character,Integer> hs =new HashMap();
+//       for(int i=0;i<3;i++)
+//       {
+//           hs.put(s.charAt(i),hs.getOrDefault(s.charAt(i),0)+1);
+//           
+//       }
+//      if(hs.size()==3) count++;
+//       
+//       for(int j=3;j<s.length();j++)
+//       {
+//           
+//           hs.put(s.charAt(j),hs.getOrDefault(s.charAt(j),0)+1);
+//          if(hs.get(s.charAt(start))>1) hs.put(s.charAt(start),hs.get(s.charAt(start))-1);
+//          else
+//             hs.remove(s.charAt(start));
+//          if(hs.size()==3) count++;
+//          start++;
+//      }
+//   return count;
+	   
 }
