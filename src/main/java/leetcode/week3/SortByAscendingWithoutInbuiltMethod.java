@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.week3;
 import org.junit.Assert;
 import org.junit.Test;
 

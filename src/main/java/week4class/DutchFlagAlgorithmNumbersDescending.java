@@ -1,33 +1,35 @@
-package week3class1;
+package week4class;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class DutchFlagAlgorithm2 {
+public class DutchFlagAlgorithmNumbersDescending {
 	
 	
 	
 	@Test
 	public void threePointerString() {
-		String[] input = {"Red", "Green", "Green", "Blue", "Red"};
-		Assert.assertArrayEquals(new String[] {"Red", "Red", "Green", "Green", "Blue"}, threePointer(input));
+		int[] input = {1,2,0,1,2};
+		Assert.assertArrayEquals(new int[] {2,2,1,1,0}, threePointer(input));
 	}
 	
 
-	public String[] threePointer(String[] input) {
+	public int[] threePointer(int[] input) {
 		// TODO Auto-generated method stub
 		
-		
 		int low=0, middle=0, high=input.length-1;
-		String temp;
+		int temp = 0;
 		while(middle<=high) {
-		if(input[middle]=="Red") {
+		if(input[middle]==2) {
 			temp = input[middle];
 			input[middle] =input[low];
 			input[low] = temp;
 			middle++;
 			low++;			
-		}else if(input[middle]=="Green") {
+		}else if(input[middle]==1) {
 			middle++;
 		}else {
 			temp =input[high];
@@ -36,8 +38,7 @@ public class DutchFlagAlgorithm2 {
 			high--;
 		}
 
-	   }
-		//System.out.println(Arrays.toString(input));
+		}
 		return input;
 	}
 

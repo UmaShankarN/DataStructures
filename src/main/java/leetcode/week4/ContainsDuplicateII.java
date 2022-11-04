@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.week4;
 
 import org.junit.Test;
 
@@ -68,12 +68,9 @@ public class ContainsDuplicateII {
 		 HashMap<Integer, Integer> ivmap = new HashMap<>();
 		 
 		 for (int i =0;i<nums.length;i++) {
-			 if(!ivmap.containsKey(nums[i]))
-				 ivmap.put(nums[i], i);
-			 else if(Math.abs(ivmap.get(nums[i])-i)<=k)
+			 if(ivmap.containsKey(nums[i]) &&  Math.abs(ivmap.get(nums[i])-i)<=k)
 				 return true;
-			 else
-				 ivmap.put(nums[i], i);
+			 ivmap.put(nums[i], i);
 		}
 		return false;
 	    }

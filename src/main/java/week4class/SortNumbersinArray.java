@@ -1,8 +1,8 @@
-package week3class1;
+package week4class;
 
 import java.util.Arrays;
 
-public class DutchFlag {
+public class SortNumbersinArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

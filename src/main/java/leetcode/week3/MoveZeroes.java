@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.week3;
 
 public class MoveZeroes {
 

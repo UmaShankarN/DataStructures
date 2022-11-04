@@ -1,29 +1,27 @@
-package week3class1;
-
-import java.util.HashMap;
-import java.util.Map;
+package week4class;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class DutchFlagAlgorithmDescending2 {
+public class DutchFlagAlgorithmNumbersAscending {
 	
 	
 	
 	@Test
 	public void threePointerString() {
 		int[] input = {1,2,0,1,2};
-		Assert.assertArrayEquals(new int[] {2,2,1,1,0}, threePointer(input));
+		Assert.assertArrayEquals(new int[] {0,1,1,2,2}, threePointer(input));
 	}
 	
 
 	public int[] threePointer(int[] input) {
 		// TODO Auto-generated method stub
 		
+		
 		int low=0, middle=0, high=input.length-1;
 		int temp = 0;
 		while(middle<=high) {
-		if(input[middle]==2) {
+		if(input[middle]==0) {
 			temp = input[middle];
 			input[middle] =input[low];
 			input[low] = temp;
@@ -38,7 +36,8 @@ public class DutchFlagAlgorithmDescending2 {
 			high--;
 		}
 
-		}
+	   }
+		//System.out.println(Arrays.toString(input));
 		return input;
 	}
 

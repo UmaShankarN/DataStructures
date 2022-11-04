@@ -1,8 +1,8 @@
-package leetcode;
+package leetcode.week3;
 
 import java.util.Arrays;
 
-public class Problem1317 {
+public class ConvertIntegertotheSumofTwoNoZeroIntegers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
