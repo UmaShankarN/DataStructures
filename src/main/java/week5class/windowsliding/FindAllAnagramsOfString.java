@@ -1,4 +1,4 @@
-package week5class;
+package week5class.windowsliding;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,12 +75,12 @@ public class FindAllAnagramsOfString {
 	 * in current iteration one value is removed and next value is added
 	 * Check if the s string length is greater than or equal to p string length
 	 * if it is less then return the empty list
-	 * add each character and its count to a HashMap pMap
+	 * add each character string s and its count to a HashMap pMap
 	 * get the first window of length p from the string s and it to sMap
 	 * check if pMap and sMap matches, if matches add the index of first character to a list
 	 * iterate from character at p length from string s to length of s
 	 * reduce the value count of character at first index of s from sMap if it is >1 or remove the character
-	 * And add the current character to the map
+	 * And add the current character to the sMap
 	 * if the pMap and sMap are equals, add the second index(start-p.length()+1) (as it is first index in the current iteration)
 	 * to the list
 	 * iterate until the last character is added to the sMap
