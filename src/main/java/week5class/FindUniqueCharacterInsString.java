@@ -7,6 +7,11 @@ import org.junit.Test;
 
 public class FindUniqueCharacterInsString {
 	
+	/*
+	 * 387. First Unique Character in a String
+	 * https://leetcode.com/problems/first-unique-character-in-a-string/
+	 * 
+	 */
 	@Test
 	public void firstUniqChar1() {
 		
