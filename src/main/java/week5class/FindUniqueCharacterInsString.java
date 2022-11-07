@@ -1,7 +1,6 @@
 package week5class;
 
 import java.util.HashMap;
-import java.util.Map.Entry;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -35,8 +34,7 @@ public class FindUniqueCharacterInsString {
 	/*
 	 * check if the first index and last index matches
 	 * return the current index
-	 * if no match found
-	 * return -1
+	 * if no match found return -1
 	 * 
 	 */
 	public int firstUniqChar(String s) {
@@ -54,11 +52,11 @@ public class FindUniqueCharacterInsString {
 	
 	/*
 	 * Pseudocode:
-	 * Create a Map and add each character and occurrence
-	 * iterate through the entryset
-	 * get each key and check if key is 1
-	 * store the minimum index in the min integer
-	 * if no match found and the min is max value return -1
+	 * Create a Map and add each character and occurrence 
+	 * iterate through the keyset
+	 * get each key and check if value of key is 1
+	 * store the minimum index in the min integer variable
+	 * if no match found and the min is Integer.MAX_VALUE return -1
 	 * 
 	 */
 	
