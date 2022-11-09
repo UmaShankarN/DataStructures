@@ -9,6 +9,11 @@ import org.junit.Test;
 
 public class TownJudge {
 
+	/*
+	 * 997. Find the Town Judge
+	 * https://leetcode.com/problems/find-the-town-judge/description/
+	 * 
+	 */
 	@Test
 	public void findJudge1() {
 
