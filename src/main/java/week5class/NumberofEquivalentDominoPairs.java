@@ -55,8 +55,17 @@ public class NumberofEquivalentDominoPairs {
 		return counter;
 	}
 
-	// int[][] dominoes = { { 1, 2 }, { 2, 1 }, { 3, 4 }, { 5, 6 } }; pairs =2
-	// int[][] dominoes = { { 1, 2 }, { 1,2 }, {1,1 }, {1,2 },{2,2} }; pairs =3
+	/*
+	 * declare an integer array with size 100
+	 * to identify unique pairs (1,2) or (3,0) when added gives the same sum
+	 * so to differentiate the above examples, multiplying the min value of each array with 10 
+	 * and add with max value, store the occurence/count of same value
+	 * in the position of the above arithmetic result
+	 * for example (1,2) = 1*10+2 = 12, if we have another array (1,2) =12, so 2 will be stored at 11th(12-1) index
+	 * to get the combination use the formula n*n-1/2 for each value greater than 1
+	 * return the result
+	 * 
+	 */
 	public int numEquivDominoPairs(int[][] dominoes) {
 
 		int[] value = new int[100];
