@@ -111,7 +111,11 @@ public class TownJudge {
 			nottrusted.add(intarray[0]);
 			trusted.add(intarray[1]);
 		}
-
+		//1,2,3
+		//3,3,1
+		
+		//1,2
+		//3,3
 		int picked = 0;
 		HashMap<Integer, Integer> trustcountmap = new HashMap<>();
 		for (Integer integer : trusted) {
