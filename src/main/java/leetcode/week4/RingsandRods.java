@@ -51,7 +51,7 @@ public class RingsandRods {
     	HashMap<Character, String> rodrings = new HashMap<>();
     	for(int i=0;i<rings.length();i+=2)
     		rodrings.put(rings.charAt(i+1), rodrings.getOrDefault(rings.charAt(i+1), "")+rings.charAt(i));
-    	
+    		System.out.println(rodrings);
     	int counter =0;
     	for (String rings1 : rodrings.values()) {
     		HashSet<Character> rset = new HashSet<>();
