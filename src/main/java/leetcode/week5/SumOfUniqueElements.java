@@ -29,14 +29,13 @@ public class SumOfUniqueElements {
 		int[] nums = { 1, 2, 3, 4, 5 };
 		Assert.assertEquals(15, sumOfUnique(nums));
 	}
-	
+
 	/*
-	 * Create a map to store the given numbers in nums array as key and the occurences in value
-	 * iterate through the nums array and add the key value to the map
-	 * initialise a sum variable
-	 * iterate through the keyset of the map and get the value that is occurred once using the key
-	 * add the number(key) to the sum and store it in sum
-	 * after the iteration return the sum
+	 * Create a map to store the given numbers in nums array as key and the
+	 * Occurrences in value iterate through the nums array and add the key value to
+	 * the map initialise a sum variable iterate through the keyset of the map and
+	 * get the value that is occurred once using the key add the number(key) to the
+	 * sum and store it in sum after the iteration return the sum
 	 * 
 	 */
 	public int sumOfUnique(int[] nums) {
