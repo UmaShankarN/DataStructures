@@ -1,0 +1,80 @@
+Debugging questions
+- How will you debug the scenario where after entering user name & password,
+ home page is not displayed & error message is not displayed
+ Answers:
+ 1.) I'll try once after clearing cookies.
+ 2.) I'll check the network tab, if the request is being sent. if it is sent what is received as response.
+ 
+ Discovery:
+ Login is not working after entering username and password.
+ 
+ Preliminary Question's:
+ From where the issue is identified. UI, mobile?
+ Is this issue happening for a specific user or many user?
+ if many users- is this across all region or from specific region?
+ if the user is a new user?
+ if he is the existing user, when it was worked before?
+ version of application if it is mobile app?
+ check if there is any recent update or deployment to production?
+ If it is mobile or UI specific issue? if it is working in UI and not in mobile, identify the problem.
+ what version of mobile OS is available if it is from mobile.
+ Browser version of web and kind of web browser used.
+ Mobile app- Issue occurred because of more background apps when trying to login.
+  
+Possible reasons:
+Web:
+Version of browser
+New/Existing user
+Prime/Non-Prime user
+Region specific
+Last worked date time
+invalid input
+Peak time login
+
+Mobile:
+Version of apps
+Mobile OS
+Background apps
+New/Existing user
+Prime/Non-Prime user
+Region specific
+Last worked date time
+invalid input
+Peak time login
+ 
+- You are part of MakeMyTrip QA, Indigo flights interested to collaborate with MMT to get booking via MMT. 
+From the Indigo side, they have their codebase ready to integrate with MMT.Indigo only has a Production 
+environment,MMT has a local, stage, pre-production, and production environment. As a QA what is your 
+approach and Design you will do to test the functionality?Testing approach on each environment.
+
+Answer- 1.) I'll understand the requirement from them. How the functionalities, how their requests are 
+consumed by their code, how the request and response are stored in the database
+in the production environment by connecting with their Devs, QAs and Product team. Ask questions related to the 
+requirement, functionalities. Try to mock the response if I am going to send the request from MMT and check 
+if the response is expected and deploy it as a service to cloud and test in higher environments
+Before that risk of using mock has to be called out as the limitation of proper testing with the actual code
+has to be called out from QA perspective.
+
+Brain teaser
+- 9 metallic balls in front, all made of same metal and all are same size and same colour, one of the 
+balls is defective. Defective ball can weigh lesser or more than other balls given a weighing balance 
+find the defective ball. What is the min number of attempts for finding defective what is max number of 
+attempts for finding defective ball
+
+1.) Finding Minimum attempt
+3 groups - weigh 2 groups - check if it balanced, if it is balanced(chance 1)- one should be in third group
+weigh third group each balls one on left and one on right- if balances- third one from third group is defective
+so minimum 2 chances
+
+3 attempts
+2.) Finding Maximum attempt
+3 groups - weigh 2 groups- if it is not balanced, remove one group until it balances to find the not 
+balancing one - so worst case in 2 attempt find the group which is defective
+in another 2 attempt find the defective from the defective group.
+so 4 attempts.
+
+8 attempts- weighing one by one 
+
+	
+
+ 
