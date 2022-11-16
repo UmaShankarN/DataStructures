@@ -41,7 +41,8 @@ Region specific
 Last worked date time
 invalid input
 Peak time login
- 
+-----------------------------------------------------------------------------------------------------
+
 - You are part of MakeMyTrip QA, Indigo flights interested to collaborate with MMT to get booking via MMT. 
 From the Indigo side, they have their codebase ready to integrate with MMT.Indigo only has a Production 
 environment,MMT has a local, stage, pre-production, and production environment. As a QA what is your 
@@ -54,7 +55,7 @@ requirement, functionalities. Try to mock the response if I am going to send the
 if the response is expected and deploy it as a service to cloud and test in higher environments
 Before that risk of using mock has to be called out as the limitation of proper testing with the actual code
 has to be called out from QA perspective.
-
+-----------------------------------------------------------------------------------------------------
 Brain teaser
 - 9 metallic balls in front, all made of same metal and all are same size and same colour, one of the 
 balls is defective. Defective ball can weigh lesser or more than other balls given a weighing balance 
@@ -74,7 +75,88 @@ in another 2 attempt find the defective from the defective group.
 so 4 attempts.
 
 8 attempts- weighing one by one 
+-----------------------------------------------------------------------------------------------------
+Test Enumeration
 
-	
+- Test case enumeration for file upload in a portal.
+*Verify all supported file formats are uploaded
+*Verify drag/drop and upload options are used to upload
+*Verify more than one file or bulk upload can be done
+*Verify the file size with allowed size limit can be uploaded
+ more than allowed size limit cannot be uploaded
+*Verify if the upload progress is shown when uploading
+*Verify the file uploaded before is allowed to upload again
+*Verify the uploaded file information is shown after successful upload
+*Verify uploaded file can be removed and uploaded again
+*Verify upload can be cancelled while the upload operation is in progress
+*Verify file that contains sensitive information can be uploaded 
+	if there is any option of scanning while uploading the file
+*Verify similarity checks are done when the file is uploaded
+*Verify uploaded file can be downloaded and check if the file is not corrupted after uploaded
+*Verify no error message when same file name with different file format and same size is uploaded
+*Verify password protected file can be uploaded.
+*Verify the password protected files security is not removed after uploaded. verify by downloading
+
+*Verify similarity checks are not done when the file is uploaded with password
+*Verify error message when the unsupported file formats are tried to uploaded
+*Verify error message/file replaced when same file name, same file format with same size is uploaded
+*Verify the file names(Upto the limit can be shown if more files are uploaded) are displayed in the UI
+*Verify error when more than allowed bulk limit upload is uploaded at the same time.
+
+UI:
+*Verify file upload from browser, mobile and other devices like tablet
+*Verify file can be downloaded.
+
+Security:
+* Verify during the time of upload no sensitive information is exposed even if the file is 
+password protected
+
+
+API:
+*Verify file upload can be done using API call(Multipart in restAssured)
+*Verify bulk upload of files can be done. 
+*Verify batch upload request
+*Verify different error messages and successful response
+*Verify with invalid headers
+
+Performance:
+*Verify multiple user uploads file at the same time(Examinations)
+*Verify multiple user uploads same file at the same time
+*Verify multiple user uploads large file size at the same time(50 users/1000 users response time 
+and compare it with single user)
+
+Compatibility:
+*Verify new file format is not supported in older version/build
+*Verify file upload scenarios in different browsers and different versions of browser
+
+Usability:
+Verify the upload button is recognisable and highlighted from other elements in the page
+Verify the error messages are meaningful
+Verify the file names are shown as the name of the file uploaded
+Verify the failure is called out after the upload time limit is exceeded
+
+Edge cases:
+*Network problem - Resume upload
+*Network change - Resume upload
+*Browser automatic update - Resume upload
+*Browser close and open- No information on upload
+*Total limit exceeds when the last file is uploaded- Only last shouldn't upload remaining files should
+get uploaded
+
+-----------------------------------------------------------------------------------------------------
+- You have three modules(timer, manual, wi-fi) one is Wi-Fi enabled AC with connected to Router and we can control 
+the AC via web applications and mobile applications. What are the types of testing you do?
+(TBC)
+
+
+-----------------------------------------------------------------------------------------------------
+
+Brain teaser
+- You have two buckets one with capacity of 5 litres and the other with a capacity of 3 litres. 
+You have to measure 4 litres using the two buckets.How will you do it??
+*Take 3L bucket, fill it with water and pour it in 5L once- Now 5L bucket has 3L of water
+*Do one more time and the 5L will be filled and 3L bucket will have 1L of water remaining
+*Empty the 5L bucket, pour the 1L water in 5L bucket
+*Fill the 3L bucket and pour it in 5L bucket. Now the 5L bucket will have 4L in it.
 
  
