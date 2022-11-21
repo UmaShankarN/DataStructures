@@ -159,4 +159,148 @@ You have to measure 4 litres using the two buckets.How will you do it??
 *Empty the 5L bucket, pour the 1L water in 5L bucket
 *Fill the 3L bucket and pour it in 5L bucket. Now the 5L bucket will have 4L in it.
 
+
+-----------------------------------------------------------------------------------------------------
+Test Enumeration
+- There is a change in requirement where the Country text box is replaced by a dropdown 
+how do you take this from QA angle
+Common errors like incorrect typing of country name while testing
+
+
+
+-----------------------------------------------------------------------------------------------------
+- Test case Enumeration of Login scenario and OTP generation?
+*Verify login is successful when valid OTP is provided after giving valid username and password
+*Login not successful with invalid OTP after giving valid username and password
+*OTP request not triggered when invalid username or password or both are given
+*Login successful after sometime but before the OTP expires
+*Login not successful after the OTP expired
+*Login not successful when the correct OTP with extra special characters are given
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+Brain teaser
+- You have a two wheeler with a spare tyre, given each tyre would be worn out after travelled 
+for 2.5kms, what’s the max distance you can travel?
+*2.5 Kms
+
+-----------------------------------------------------------------------------------------------------
+Test enumeration 
+Consider there are three services cart, reservation and inventory. Functionality of these services are 
+as follows. Write test enumeration to test the cart functionality
+Cart- to add the items before buying 
+Reservation - Store the added items from cart, but it reserves the item only for 10 minutes, 
+after that it evicts data. Inventory- a catalog service which has all the item informations
+
+Inventory page: Cart Icon
+*Verify the items selected from the catalog are added to the cart. Cart icon from inventory page 
+should display the quantity added
+*Verify sum quantity should be displayed on Cart icon when same item with more than 
+one quantity is added from inventory page
+*Verify multiple items selected from the catalog are added to the cart. Cart icon from inventory page
+should display the sum quantity of all items added
+*Verify quantity displayed over the cart icon gets reset after 10 minutes of adding item to the cart
+*Verify multiple items added in a different time within 10 minutes are removed from cart after 10 minutes
+of the respective item added to cart. Not all items should be removed by considering the first added item
+*Verify an item is removed from cart after 10 minutes of increasing the quantity(last activity)
+ from the inventory page
+*Verify cart quantity is displayed dynamically when the user increases or decreases the quantity
+*Verify out of stock items don't have an option to add to cart in inventory page
+*Verify an item removed by the user can be added again to the cart from inventory page
+*Verify age restricted items cannot be added by the guest user or by certain age category users
+*Verify user who added items as guest can view the cart information after logging in and can continue
+adding items to the cart
+*Verify items can be added to wishlist and can be added to cart from wishlist
+*Verify user can add the max number of items that a user can purchase and the respective 
+quantity is displayed
+
+
+Inventory page: View item information by clicking on Cart icon/Cart page
+*Verify the item information(description, quantity, price, currency type) shown on mouse hover or 
+clicked over the cart icon and the same should match the actual
+*Verify information of sum price and sum quantity, individual price, individual quantity when multiple 
+items are added or when same item with multiple quantity are added and available in the Cart
+*Verify items can be modified(Increase or decrease quantity, remove item) from the cart information
+*Verify items added from wishlist can be viewed under cart icon
+
+
+Error:
+*Verify error if the item inventory available when the page was loaded is not available when the 
+user clicks the Add to Cart and moves to cart page
+*Verify error when age restricted items are added by certain age category users.
+*Verify error when a user adds a single item if the quantity exceeds the allowed limit.
+
+Performance:
+*Verify multiple user adds item at the same time(Festive Sale period or end of deal time)
+*Verify multiple user is able to add same item with allowed quantities per user at the same time
+
+Compatibility:
+*Verify the above scenarios in different browsers and different versions of browser.
+
+Usability:
+*Verify the Add to cart button is recognisable from other elements in the inventory selection page
+*Verify error messages are meaningful if the item inventory available 
+ when the page was loaded is not available when the user clicks the Add to Cart
+*Verify the numbers shown over the Cart icon in the inventory page doesn't hide/overlap the icon
+*Verify offer/deal information is clearly shown for each product once the customer selects and view the 
+item
+*Verify the inventory and the cart page can be navigated easily back and forth by the user 
+without any problem
+*Verify option to scroll is available when the number of items exceeds the page view
+*Verify user is logged out of certain period of inactivity.
+
+
+API:
+*Verify request with bulk quantities and different items are sent in the Add to cart request 
+and the response 200 OK
+*Verify Get Add to cart request has the information of items added and the current status(availability)
+of the added item
+*Verify Get request sent after 10 minutes has the updated item information with availability status
+*Verify user with guest user session Id can add more items with respective session ID and valid user ID is 
+used in the add item to cart request.
+*Verify empty get response is given for valid user who added items to cart as guest user though valid
+session ID is provided in the get request
+*Verify items that are added during guest session and valid login session are shown in get response 
+after user updates the cart with session ID and user ID
+
+API Error:
+*Verify error message in get response when different user ID with valid session ID 
+used for adding items to cart is sent in request.
+*Verify with invalid headers, invalid token
+
+Edge:
+*Verify items added during guest session is shown after restarting the browser
+*Items added by guest user, entry removed from DB, more items added by guest user 
+after login using same session ID, get the cart information- response should have only items added after 
+login.
+*Item are shown or not shown in Cart after 10 minutes of network down.
+
+Security:
+*Verify user information is not exposed in any of the API call
+*Item quantity or items cannot be added through scripts
+
+-----------------------------------------------------------------------------------------------------
+
+Riddle 
+One rich man has two sons, he plans to give his entire wealth to only one son. 
+So he kept a race between two sons.  Race: He Gave a Camel to each son and Said, 
+whose Camel reaches as second to Abu Dhabi from Dubai, that Person will get the wealth. 
+They were wandering around Dubai for while and they got advice from a wise man. 
+Immediately after hearing that they started racing towards Abu Dhabi. What was it?
  

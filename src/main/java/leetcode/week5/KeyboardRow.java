@@ -70,12 +70,12 @@ public class KeyboardRow {
 			if(eachword.length()==thirdRowcounter)
 				outputList.add(eachword);
 		}
-        
         String[] output = new String[outputList.size()];
         for(int i=0;i<outputList.size();i++)
         	output[i] = outputList.get(i);
         
 		return output;
+		//	return outputList.toArray(new String[0]);
 
     }
 }
