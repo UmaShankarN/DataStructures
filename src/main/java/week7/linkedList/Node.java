@@ -11,6 +11,7 @@ public class Node {
 		next= null;
 		previous = null;
 	}
+
 	
 	
 

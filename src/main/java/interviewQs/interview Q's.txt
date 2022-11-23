@@ -299,8 +299,10 @@ Security:
 
 Riddle 
 One rich man has two sons, he plans to give his entire wealth to only one son. 
-So he kept a race between two sons.  Race: He Gave a Camel to each son and Said, 
+So he kept a race between two sons. Race: He Gave a Camel to each son and Said, 
 whose Camel reaches as second to Abu Dhabi from Dubai, that Person will get the wealth. 
 They were wandering around Dubai for while and they got advice from a wise man. 
 Immediately after hearing that they started racing towards Abu Dhabi. What was it?
+
+Exchange the camel between first and second son.
  

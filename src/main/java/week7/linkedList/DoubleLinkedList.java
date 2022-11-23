@@ -22,7 +22,6 @@ public class DoubleLinkedList {
 	
 	
 	private int size() {
-		
 		return length;
 	}
 	
@@ -45,6 +44,12 @@ public class DoubleLinkedList {
 		s1.add(2);
 		s1.add(3);
 		s1.add(4);
+		
+		System.out.println("-------print list before removing elemnt by index------------");
+		for (int i = 0; i < s1.size(); i++)
+			System.out.println(s1.get(i));
+		
+		
 }
 	
 }
