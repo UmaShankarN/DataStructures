@@ -76,7 +76,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	 * iteration.
 	 * 
 	 */
-	public int lengthOfLongestSubstring(String s) {
+	public int lengthOfLongestSubstring2(String s) {
 
 		List<String> substrings = new ArrayList<>();
 
@@ -94,8 +94,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 			HashSet<Character> schar = new HashSet<>();
 			for (Character character : string.toCharArray())
 				schar.add(character);
-			if (schar.size() == string.length())
+			if (schar.size() == string.length()) {
 				size = Math.max(size, schar.size());
+				System.out.println(size);}
 		}
 		// System.out.println(size);
 		return size;
@@ -109,8 +110,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	 * ends, the maximum value is returned
 	 * 
 	 */
-	public int lengthOfLongestSubstring2(String s) {
-
+	public int lengthOfLongestSubstring(String s) {
+		
 		HashSet<Character> newSet = new HashSet<>();
 		int maxSize = 0, right=0,left=0;
 		while(right < s.length() && left < s.length()){

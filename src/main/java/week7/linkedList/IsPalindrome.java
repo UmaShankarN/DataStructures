@@ -1,7 +1,5 @@
 package week7.linkedList;
 
-import java.util.LinkedList;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -23,10 +21,10 @@ public class IsPalindrome {
 
 	public boolean isPalindrome(Node head) {
 		
-		//Node temp = head;
-		//Node temp2 = head;
-		Node current = head;
-		Node following = head;
+		Node temp = head;
+		//Node temp2 = temp;
+		Node current = temp;
+		Node following = temp;
 		Node previous = null;
 		// 1 2 3 4
 		// 2
@@ -47,11 +45,11 @@ public class IsPalindrome {
 		}
 		
 		//didn't change head
-//		while (temp2 != null) {
-//
-//			System.out.println(temp2.value);
-//			temp2 = temp2.next;
-//		}
+		while (head != null) {
+
+			System.out.println(head.value);
+			head = head.next;
+		}
 		
 		
 
